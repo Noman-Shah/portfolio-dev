@@ -1,0 +1,147 @@
+.experience-container {
+  margin: 8rem 0;
+  position: relative;
+}
+
+.experience-content, .contact-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to three columns */
+  gap: 2rem; /* Space between cards */
+}
+
+.experience-container h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px) { /* Tablet devices */
+  .experience-content, .contact-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+  .experience-content, .contact-container {
+    grid-template-columns: 1fr; /* One column */
+  }
+  
+  .experience-container {
+    margin: 4rem 0;
+  }
+  
+  .experience-container h5 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .work-experience-card {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering content */
+    width: 100%; /* Ensure full width on mobile */
+  }
+  
+  .work-experience-card h6, 
+  .work-experience-card .work-duration, 
+  .work-experience-card ul, 
+  .work-experience-card img {
+    text-align: center; /* Center text and image */
+  }
+}
+
+.work-experience-card {
+  background: #130f2a;
+  border-radius: 0.65rem;
+  border: 1.5px solid #6751b9;
+  padding: 1.5rem;
+  margin: 0 1rem;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.work-experience-card h6 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.work-experience-card img {
+  width: 100%; /* Ensure images are responsive */
+  max-width: 320px;
+  height: auto;
+}
+
+.work-duration {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  background: rgba(103, 81, 185, 0.5);
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 1.3rem;
+}
+
+.work-experience-card ul li {
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.work-experience-card ul li::after {
+  content: " ";
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #6751b9;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: -1.3rem;
+  top: 0.35rem;
+}
+
+.contact-container {
+  display: grid; /* Changed from flex to grid */
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .work-experience-card {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    width: 100%; /* Ensure full width */
+  }
+
+  .contact-container {
+    display: grid; /* Change to grid for mobile devices */
+    grid-template-columns: 1fr; /* One column */
+  }
+
+  .work-experience-card h6 {
+    font-size: 0.95rem;
+  }
+
+  .work-experience-card ul li {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .work-experience-card {
+    width: 100%; /* Ensure images are responsive */
+    max-width: 310px; /* Max width for smaller screens */
+    height: auto;
+  }
+  .work-experience-card img {
+    width: 100%; /* Ensure images are responsive */
+    max-width: 220px; /* Max width for smaller screens */
+    height: auto;
+  }
+
+}

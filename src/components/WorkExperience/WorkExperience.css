@@ -1,0 +1,86 @@
+.experience-container {
+  margin: 8rem 0;
+  position: relative;
+  width: 100%; /* Ensure container takes full width */
+  box-sizing: border-box;
+}
+
+.experienced-content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);/* Default to three columns */
+  gap: 2rem; /* Space between cards */
+}
+
+.experience-container h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.work-experience-cardd {
+  background: #130f2a;
+  border-radius: 0.65rem;
+  border: 1.5px solid #6751b9;
+  padding: 1.5rem;
+  flex: 1 1 calc(50% - 1rem); /* Ensure two cards per row with spacing */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  min-width: calc(50% - 1rem); /* Ensure minimum width is half of the container minus gap */
+}
+
+.work-experience-cardd h6 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.work-duration {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  background: rgba(103, 81, 185, 0.5);
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 1.3rem;
+}
+
+.work-experience-cardd ul li {
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.work-experience-cardd ul li::after {
+  content: " ";
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #6751b9;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: -1.3rem;
+  top: 0.35rem;
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    margin: 4rem 0;
+  }
+
+  .experience-container h5 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .experienced-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);/* Default to three columns */
+    gap: 2rem; /* Space between cards *//* Stack the cards vertically on small screens */ /* Adjust gap for smaller screens */
+  }
+
+  .work-experience-cardd {
+    flex: 1 1 100%; /* Ensure each card takes full width on smaller screens */
+    min-width: 100%; /* Ensure minimum width is full container width */
+  }
+}
+
